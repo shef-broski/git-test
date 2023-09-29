@@ -134,6 +134,47 @@ p a {
   color: #0c1631;
 }
 
+.fun-fact {
+  background-color: rgba(255, 192, 203, 0.649);
+  border-radius: 10%;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.🗿 {
+  width: 400px;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+.quote {
+  background-color: rgba(35, 61, 10, 0.68);
+  border-radius: 10%;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
+video {
+  border-radius: 4%;
+  margin: 10px;
+}
+
+.riddle {
+  background-color: rgba(237, 237, 48, 0.752); 
+  border-radius: 10%;
+  text-align: center;
+}
+
+details {
+  margin: 0px 10px 0px 10px;
+}
+
+details h3 {
+  margin-top: 30%;
+  font-size: 32px;
+}
+
 #contacts {
   display: flex;
   flex-direction: column;

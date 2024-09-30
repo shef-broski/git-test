@@ -6,16 +6,16 @@ import math
 
 calculation = ""
 
-def add_to_calculatons(symbol):
+def add_to_calculatons(symbol): # This is what gets shown when you press the normal buttons
     global calculation
-    calculation += str(symbol)
-    textbox.delete(1.0, "end")
-    textbox.insert(1.0, calculation)
+    calculation += str(symbol) # Add the pressed button to the textbox
+    textbox.delete(1.0, "end") # Clear it for the next button
+    textbox.insert(1.0, calculation) 
 
-def evaluate_calculation():
+def evaluate_calculation(): # This is what happens when you press the "=" sign.
     global calculation
-    try:
-        result = str(eval(calculation))
+    try:                    # I followed the tutorial, idk what try is, but it's basically runs if there are no errors.
+        result = str(eval(calculation)) # eval() is a python functions to evaluate any mathematical but also code expression.
         calculation = ""
         textbox.delete(1.0, "end")
         textbox.insert(1.0, result)
@@ -23,7 +23,7 @@ def evaluate_calculation():
         clear_field()
         textbox.insert(1.0, "error")
 
-def clear_field():
+def clear_field(): # This just clears the textbox
     global calculation
     calculation = ""
     textbox.delete(1.0, "end")
@@ -50,10 +50,10 @@ buttonFrame.columnconfigure(3, weight=1)
 btn1 = tk.Button(buttonFrame, text="1", command=lambda: add_to_calculatons(1)) # button is nested in buttonFrame
 btn1.grid(row=0, column=0, sticky=tk.W + tk.E) # .grid() takes rows and columns as parameters and starts from o
 
-btn2 = tk.Button(buttonFrame, text="2", command=lambda: add_to_calculatons(2))
+btn2 = tk.Button(buttonFrame, text="2", command=lambda: add_to_calculatons(2)) # "command=" is the wiring, it links pressing the button to calling a specific function.
 btn2.grid(row=0, column=1, sticky=tk.W + tk.E) # sticky means it will try to stick to the left (West) or right (East)
 
-btn3 = tk.Button(buttonFrame, text="3", command=lambda: add_to_calculatons(3))
+btn3 = tk.Button(buttonFrame, text="3", command=lambda: add_to_calculatons(3)) 
 btn3.grid(row=0, column=2, sticky=tk.W + tk.E)
 
 btn4 = tk.Button(buttonFrame, text="4", command=lambda: add_to_calculatons(4))
